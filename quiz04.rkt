@@ -25,16 +25,34 @@
 (* x (lineal x (- n 1)))))
 (lineal 2 4)
 
-;------------------------ Ejercio 2 ------------------------
-;lucas number function, where if n = 0 so 0 and if n = 1 so 1 else if n > 1 so lucas(n-1) - lucas(n-2)
+;------------------------ Ejercio 2.a ------------------------
+;lucas function
 
 (define (lucas n)
 (if (= n 0)
 0
 (if (= n 1)
-1
-(- (lucas (- n 1)) (lucas (- n 2))))))
+2
+(- (* (lucas (- n 1)) 2 ) (* (lucas (- n 2)) 3 ))))
 (lucas 10)
+
+;------------------------ Ejercio 2.b ------------------------
+;fibonacci function lineal
+
+(define (fib n) ; n = 0 so fib(0) = 0 and n = 1 so fib(1) = 1
+(define (fib-iter a b p q count) ; a = 0, b = 1, p = 1, q = 1, count = 0
+(if (= count 0) ; if count = 0 so return b
+b ; return b
+(fib-iter   
+(- (+ (* b q) (* a q) (* a p)) (* b p))
+(+ (* b q) (* a q))
+p
+q
+(- count 1))))
+(fib-iter 1 0 0 1 n))
+(fib 8)
+
+
 
 ;------------------------ Ejercio 3 ------------------------
 ;function for calculating  if Un = -1 so 2, if n = 0 so 1, if n = 1 so 0 else n >= 3 so 5U(n-1) - 9U(n-2) - 9U(n-3) 
