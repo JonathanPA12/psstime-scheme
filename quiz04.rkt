@@ -58,14 +58,14 @@ q
 ;function for calculating  if Un = -1 so 2, if n = 0 so 1, if n = 1 so 0 else n >= 3 so 5U(n-1) - 9U(n-2) - 9U(n-3) 
 
 (define (U n)
-(if (= n -1)
-2
+(if (= n 2)
+-1
 (if (= n 0)
 1
 (if (= n 1)
 0
-(- (* 5 (U (- n 1))) (* 9 (U (- n 2))) (* 9 (U (- n 3))))))))
-(U 3)
+(- (- (* 5 (U (- n 1))) (* 3 (U (- n 2)))) (* 9 (U (- n 3))))))))
+(U 8)
 ;------------------------ Ejercio 4 ------------------------
 ; degenerate quadratic equation function, where a, b, c are the coefficients and a = 0 so
 ; determined how many solutions has the equation, the function returns a list how many
