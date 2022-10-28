@@ -112,7 +112,7 @@ q
 (define (neto-salary salary)
 (if (high-salary? salary)
 (- salary (* salary 0.2))
-(- salary (* salary 0.9))))
+(- salary (* salary 0.1))))
 
 (define (ingresar)
 (define ht (read))
