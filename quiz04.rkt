@@ -76,7 +76,7 @@ q
 (if (= c 0)
 'infinitaSolucion ; infinite solutions
 'noSolucion) ; no solutions
-(if (= c 0)
+(if (>= c 0)
 0
 (/ (- 0 c) b)))
 (let ([discriminant (- (* b b) (* 4 a c))])
@@ -90,6 +90,13 @@ q
 (degenerate-quadratic 1 2 3)
 (degenerate-quadratic 1 0 0)
 (degenerate-quadratic 0 1 0)
+
+;------------------------ Ejercio 4.1 ------------------------
+;function for calculating the descriminant of a quadratic equation, if n = 0 so return 0, elseif n = 1 so return 1, else 
+
+(define (discriminant a b c)
+(- (* b b) (* 4 a c)))
+
 
 ;------------------------ Ejercio 5 ------------------------
 
