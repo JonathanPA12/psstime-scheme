@@ -96,7 +96,7 @@ q
 
 (define (discriminant a b c)
 (- (* b b) (* 4 a c)))
-
+(discriminant 1 2 1)
 
 ;------------------------ Ejercio 5 ------------------------
 
