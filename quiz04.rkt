@@ -92,7 +92,7 @@ q
 (degenerate-quadratic 0 1 0)
 
 ;------------------------ Ejercio 4.1 ------------------------
-;function for calculating the descriminant of a quadratic equation, if n = 0 so return 0, elseif n = 1 so return 1, else 
+;function for calculating the descriminant of a quadratic equation, if n = 0 so return 0, if n = 1 so return 1, else 
 
 (define (discriminant a b c)
 (- (* b b) (* 4 a c)))
